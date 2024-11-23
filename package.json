@@ -1,0 +1,65 @@
+{
+  "name": "parameter-highlighter",
+  "displayName": "Parameter Highlighter",
+  "description": "Highlights function parameters in PHP files.",
+  "version": "0.0.4",
+  "publisher": "huny0522",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huny0522/parameter-highlighter"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.95.0",
+    "cursor": "^0.2.0",
+    "windsurf": "^0.1.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:php"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "php",
+        "extensions": [
+          ".php"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "semanticTokenTypes": [
+      {
+        "id": "parameter",
+        "superType": "variable",
+        "description": "Function parameter",
+        "formats": ["underline"]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.95.0",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.13.0",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "punycode": "^2.3.1"
+  }
+}
