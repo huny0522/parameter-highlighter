@@ -2,7 +2,7 @@
   "name": "parameter-highlighter",
   "displayName": "Parameter Highlighter",
   "description": "Highlights function parameters in PHP files.",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "publisher": "huny0522",
   "repository": {
     "type": "git",

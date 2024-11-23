@@ -13,3 +13,30 @@ class TestClass {
         return $methodParam;  // This $methodParam should be highlighted
     }
 }
+
+function SetViewHtml($newParam1 = false, $newParam2 = ''){
+    $param2 = '$param2';
+
+    if(strlen($newParam2)) $viewAction = $newParam2;
+
+    $h = '';
+    $html = 'html';
+    if($html === 'html'){
+        if($h) $html = $h;
+    }
+
+
+
+
+    if(!$newParam1){
+        $html = 'js';
+    }
+    return $html;
+}
+
+function View(){
+    $newParam1 = false;
+    $newParam2 = '';
+    $html = SetViewHtml($newParam1, $newParam2);
+    return $html;
+}
